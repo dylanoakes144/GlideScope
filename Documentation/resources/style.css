@@ -1,0 +1,110 @@
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  line-height: 1.5;
+  color: #000;
+
+  max-width: 1600px;
+  margin-left: auto;
+  margin-right: auto;
+
+  padding-left: 32px;
+  padding-right: 32px;
+}
+
+#sec_head {
+	margin-top: 2.2em;
+    font-size: 1.6em;
+    border-bottom: 2px solid #000;
+    padding-bottom: 4px;
+}
+
+#sub_sec_head {
+    margin-top: 1.6em;
+    font-size: 1.25em;
+    border-bottom: 1px solid #ccc;
+    padding-bottom: 2px;	
+}
+
+#sub_sub_sec_head {
+	margin-top: 1.2em;
+    font-size: 1.05em;
+    font-weight: bold;
+}
+
+h1 {
+    font-size: 2.2em;
+    margin-bottom: 0.6em;
+}
+
+/*h2 {
+    margin-top: 2.2em;
+    font-size: 1.6em;
+    border-bottom: 2px solid #000;
+    padding-bottom: 4px;
+}
+
+h3 {
+    margin-top: 1.6em;
+    font-size: 1.25em;
+    border-bottom: 1px solid #ccc;
+    padding-bottom: 2px;
+}
+
+h4 {
+    margin-top: 1.2em;
+    font-size: 1.05em;
+    font-weight: bold;
+}*/
+
+p {
+    margin: 0.6em 0 0.9em 0;
+}
+
+ul {
+    margin: 0.4em 0 1em 1.2em;
+}
+
+ul ul {
+    margin-top: 0.4em;
+}
+
+li {
+    margin-bottom: 0.4em;
+}
+
+.example-title {
+    margin-top: 0.9em;
+    font-size: 0.85em;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    color: #444;
+}
+
+pre {
+    background: #f7f7f7;
+    border-left: 4px solid #666;
+    padding: 10px 14px;
+    margin: 8px 0 20px 0;
+    font-family: Consolas, monospace;
+    font-size: 0.95em;
+    white-space: pre-wrap;
+}
+
+img {
+    max-width: 100%;
+    margin: 16px 0;
+}
+
+.caution {
+    border-left: 4px solid #900;
+    background: #fff4f4;
+    padding: 10px 14px;
+    margin: 20px 0;
+}
+
+.note {
+  border-left: 4px solid #444;
+  padding-left: 12px;
+  margin: 12px 0;
+}

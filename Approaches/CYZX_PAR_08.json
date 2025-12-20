@@ -1,0 +1,14 @@
+{
+  "ICAO": "CYZX",
+  "ApproachId": "PAR",
+  "RunwayIdentifier": "08",
+  "RunwayHeadingMagnetic": 81,
+  "MagneticVariation": -16,
+  "ParAlignmentHeadingDegrees": 65,
+  "ThresholdLatitude": 44.98151232716371,
+  "ThresholdLongitude": -64.93260405166357,
+  "ThresholdElevationFeet": 85,
+  "DecisionAltitudeFeet": 285,
+  "GlidepathAngleDegrees": 3,
+  "GroundPointIntercept": 954
+}

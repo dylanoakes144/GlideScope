@@ -1,0 +1,560 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GlideScope User Guide</title>
+    <link rel="stylesheet" href="./resources/style.css">
+</head>
+<body>
+
+<h1>GlideScope User Guide</h1>
+
+<h2>1. Introduction</h2>
+
+<p>
+This user guide describes the features, layout, and operation of the GlideScope application.
+It is intended to explain how the software functions and how its tools are used.
+It does <strong>not</strong> teach Precision Approach Radar (PAR) controlling techniques.
+Operational procedures, phraseology, and controller technique are covered in the PAR Handbook.
+</p>
+
+<h2 id="toc">Table of Contents</h2>
+
+<ul>
+    <li>
+        <a href="#main-menu">2. Main Menu</a>
+        <ul>
+            <li><a href="#home-screen">2.1 Home Screen</a></li>
+            <li><a href="#connection">2.1.1 Connection</a></li>
+            <li>
+                <a href="#menu">2.2 Menu</a>
+                <ul>
+                    <li><a href="#ptt">2.2.1 Configure Push-to-Talk (PTT)</a></li>
+                    <li><a href="#approaches">2.2.2 Configure Approaches</a></li>
+                    <li><a href="#show-aircraft">2.2.3 Show Aircraft</a></li>
+                    <li><a href="#on-top">2.2.4 Radar Stays on Top</a></li>
+                </ul>
+            </li>
+            <li><a href="#approach-selection">2.3 Approach Selection</a></li>
+        </ul>
+    </li>
+
+    <li>
+        <a href="#live-radar">3. Live Radar</a>
+        <ul>
+            <li><a href="#disconnections">3.1 Disconnections</a></li>
+            <li><a href="#main-scope">3.2 Main Scope</a></li>
+            <li><a href="#approach-info">3.3 Approach Information and Weather</a></li>
+            <li><a href="#tx-time">3.4 TX Time</a></li>
+            <li><a href="#range">3.5 Range</a></li>
+            <li><a href="#symbols">3.6 Symbol Size and Trail Dots</a></li>
+            <li><a href="#acid">3.7 ACID</a></li>
+            <li><a href="#other-settings">3.8 Other Settings</a></li>
+        </ul>
+    </li>
+
+    <li>
+        <a href="#simulator">4. Simulator</a>
+        <ul>
+            <li><a href="#sim-setup">4.1 Setup</a></li>
+            <li><a href="#sim-wind">4.1.1 Wind</a></li>
+            <li><a href="#sim-add-aircraft">4.1.2 Add Aircraft</a></li>
+            <li><a href="#sim-active-aircraft">4.1.3 Active Aircraft</a></li>
+            <li>
+                <a href="#sim-control">4.2 Controlling the Aircraft</a>
+                <ul>
+                    <li><a href="#sim-info">4.2.1 Information</a></li>
+                    <li><a href="#sim-heading">4.2.2 Heading</a></li>
+                    <li><a href="#sim-altitude">4.2.3 Altitude</a></li>
+                    <li><a href="#sim-speed">4.2.4 Speed</a></li>
+                    <li><a href="#sim-misc">4.2.5 Misc Settings</a></li>
+                </ul>
+            </li>
+        </ul>
+    </li>
+
+    <li><a href="#support">5. Support</a></li>
+</ul>
+
+<h2 id="main-menu">2. Main Menu</h2>
+
+<h3 id="home-screen">2.1 Home Screen</h3>
+
+<p>
+The home screen is the primary control hub for GlideScope.
+From this screen, you can connect to the network, access configuration and utility tools,
+and select an approach for which a radar scope will be opened.
+</p>
+
+<img src="./resources/main-menu.png" alt="Main menu home screen">
+
+<h3 id="connection">2.1.1 Connection</h3>
+
+<p>
+To connect to the network, ensure that an active EuroScope connection is established.
+Once EuroScope is connected, press <strong>Connect</strong>.
+When the connection is successful, the main menu will indicate that GlideScope is connected.
+</p>
+
+<img src="./resources/main-menu-connected.png" alt="Connected status">
+
+<p>
+To disconnect, select <strong>Disconnect</strong> in the main menu.
+If EuroScope disconnects unexpectedly or the user manually disconnects EuroScope,
+GlideScope will also lose its connection and display a disconnected state.
+</p>
+
+<img src="./resources/main-menu-disconnected.png" alt="Disconnected status">
+
+<p>
+If EuroScope is not connected when attempting to connect, or any other error occurs,
+the main menu will display a failed connection state.
+</p>
+
+<img src="./resources/main-menu-failed.png" alt="Failed connection status">
+
+<h3 id="menu">2.2 Menu</h3>
+
+<p>
+The menu provides access to additional settings and tools.
+These options change GlideScope behavior and enable features that support either live operation or training.
+</p>
+
+<img src="./resources/menu.png" alt="Main menu options">
+
+<h3 id="ptt">2.2.1 Configure Push-to-Talk (PTT)</h3>
+
+<p>
+This menu allows you to select your Push-to-Talk key (PTT).
+GlideScope uses this input to measure how long it has been since you last transmitted,
+helping you maintain continuous communications during a PAR.
+The timer is displayed on the radar screen.
+</p>
+
+<p>
+The default PTT is the space bar.
+To select a new PTT, press <strong>Listen</strong>, press the desired key or button, then select <strong>Save</strong>.
+</p>
+
+<img src="./resources/configure-ptt.png" alt="Configure PTT window">
+
+<h3 id="approaches">2.2.2 Configure Approaches</h3>
+
+<p>
+The Configure Approaches window allows you to add, edit, or delete approaches.
+GlideScope ships with default PAR approaches programmed for Canadian airports.
+The program is not limited to PAR approaches. You can add ILS, RNAV, TACAN, or any custom approach format you want.
+</p>
+
+<p>
+Approaches are stored inside <code>/Config/Approaches</code> as <code>.json</code> files.
+These can be modified using a standard text editor and shared with others.
+If the file is placed in that folder, GlideScope will import it automatically.
+</p>
+
+<img src="./resources/approaches.png" alt="Configure approaches window">
+
+<h4>Adding an Approach</h4>
+
+<p>
+To add a new approach, select <strong>Add New Approach</strong> from the Approaches window.
+You will be prompted for the following information:
+</p>
+
+<ul>
+    <li>Airport Identifier (4-letter ICAO code)</li>
+    <li>Approach ID (PAR, ILS, RNAV, TACAN, etc.)</li>
+    <li>Runway Identifier (11L, 29R, 36, etc.)</li>
+    <li>Runway Magnetic Heading</li>
+    <li>Airport variation (east positive, west negative)</li>
+    <li>Latitude and longitude of the threshold</li>
+    <li>Threshold elevation in ft (TDZE)</li>
+    <li>Decision altitude in ft (DA)</li>
+    <li>Glidepath angle in degrees (G/S or GPA)</li>
+    <li>Ground Point Intercept in ft (GPI)</li>
+</ul>
+
+<img src="./resources/new-approach.png" alt="Add new approach window">
+
+<p>
+Most of this information is available on approach charts.
+Charts for most of North America can be found at fltplan.com (account required; not affiliated).
+For latitude and longitude, you can use Google Maps: right-click on the desired point and copy the displayed coordinates.
+</p>
+
+<img src="./resources/maps.png" alt="Google Maps coordinates">
+
+<p>
+PAR approach charts contain most of the required information.
+For non-PAR approaches, the Ground Point Intercept is effectively how far the touchdown point is from the runway threshold.
+If it is not published, a value of approximately 1000 feet is usually sufficient for monitoring purposes.
+</p>
+
+<img src="./resources/par-info.png" alt="PAR chart information">
+
+<h4>Editing an Approach</h4>
+
+<p>
+To edit an approach, select it from the table and press <strong>Edit</strong>.
+This opens the same window used for creation, populated with the selected approach data.
+</p>
+
+<img src="./resources/edit-approach.png" alt="Edit approach window">
+
+<h4>Deleting an Approach</h4>
+
+<p>
+To delete an approach, select it from the list and press <strong>Delete</strong>.
+This removes the corresponding <code>.json</code> file inside <code>Config/Approaches</code>.
+</p>
+
+<h3 id="show-aircraft">2.2.3 Show Aircraft</h3>
+
+<p>
+The Show Aircraft menu allows you to observe the raw information packets being received for each aircraft that EuroScope displays.
+It can be filtered by typing in the callsign.
+This feature is primarily useful for debugging or verifying that traffic updates are being received correctly.
+</p>
+
+<img src="./resources/aircraft-messages.png" alt="Aircraft messages window">
+
+<h3 id="on-top">2.2.4 Radar Stays on Top</h3>
+
+<p>
+This setting forces the radar window to stay above other windows, such as EuroScope.
+It is especially useful when you need to interact with EuroScope while still keeping the scope visible without constantly alt-tabbing.
+</p>
+
+<img src="./resources/menu-ontop.png" alt="Radar stays on top option">
+
+<h3 id="approach-selection">2.3 Approach Selection</h3>
+
+<p>
+The table on the main menu allows you to select which approach to open a radar scope for.
+To open a scope, select the desired approach and double-click.
+You may open a scope before establishing a connection with EuroScope.
+</p>
+
+<img src="./resources/main-menu.png" alt="Approach selection table">
+
+<h2 id="live-radar">3. Live Radar</h2>
+
+<p>
+The live radar is the core of GlideScope.
+It provides both elevation and azimuth views.
+When used together, these panes give a practical 3D picture of an aircraft’s position on final approach.
+</p>
+
+<img src="./resources/radar.png" alt="Live radar display">
+
+<h3 id="disconnections">3.1 Disconnections</h3>
+
+<p>
+If EuroScope is disconnected (or the radar is opened before connecting),
+the radar will show a red rectangle indicating that it is not receiving live updates.
+Once EuroScope is connected, the radar resumes updates automatically.
+</p>
+
+<img src="./resources/disconnected-radar.png" alt="Radar disconnected">
+
+<h3 id="main-scope">3.2 Main Scope</h3>
+
+<p>
+The scope consists of two panes: elevation (side view) on top and azimuth (top-down) below.
+The X axis of both views is in nautical miles.
+The Y axis shows feet.
+</p>
+
+<p>
+In the elevation view, the Y axis represents feet above ground (TDZE).
+In the azimuth view, the Y axis represents lateral offset in feet.
+</p>
+
+<p>
+The elevation pane shows the glidepath as a solid green line with ticks corresponding to distance-to-touchdown.
+In short ranges (1, 3, and 5), a longer vertical green line marks the point where the glidepath intersects the decision altitude.
+</p>
+
+<p>
+A dotted green line represents the lowest safe descent path (one degree below the glidepath angle).
+If an aircraft descends below this line, it indicates an unsafe profile and the approach must be discontinued.
+</p>
+
+<p>
+The green line on the X axis of both views represents the runway.
+When an aircraft passes over the green line, it is over the runway area.
+Range selection changes the scale of the axes.
+</p>
+
+<p>
+Aircraft targets are shown as white diamonds.
+Clicking a target toggles a yellow tag that shows information such as groundspeed (kts), distance (NM),
+and vertical deviation from the glidepath (ft).
+Clicking again closes the tag.
+</p>
+
+<img src="./resources/radar-tag.png" alt="Radar target tag">
+
+<h3 id="approach-info">3.3 Approach Information and Weather</h3>
+
+<p>
+The right-side blue panel displays operational reference information.
+It includes the current time in Zulu, information on the active approach,
+and the latest METAR available to GlideScope.
+This panel is intended to reduce the need to cross-reference external sources while running a scope.
+</p>
+
+<h3 id="tx-time">3.4 TX Time</h3>
+
+<p>
+TX Time records how long it has been since your PTT was last released.
+It resets when you transmit again.
+Between 0 and 5 seconds it is green, between 5 and 10 seconds it is amber,
+and beyond 10 seconds it is red.
+</p>
+
+<p>
+For TX Time to work, the radar window must be in focus so the application can detect the PTT input.
+If you are alt-tabbed to another application, TX timing may not update.
+</p>
+
+<h3 id="range">3.5 Range</h3>
+
+<p>
+Range settings change the displayed distance scale.
+Shorter ranges provide higher precision near touchdown and make fine corrections easier to judge.
+Longer ranges provide broader situational awareness and are useful for intercept and initial stabilization.
+</p>
+
+<p>
+Range can also be adjusted using the left and right arrow keys.
+</p>
+
+<h3 id="symbols">3.6 Symbol Size and Trail Dots</h3>
+
+<p>
+Symbol size adjusts how large the aircraft diamond appears on the scope.
+This can help with visibility depending on display resolution and personal preference.
+</p>
+
+<p>
+Trail dots show a short history of recent positions.
+They are useful for quickly identifying drift, oscillation, or overcorrection trends,
+especially when working with strong winds.
+</p>
+
+<h3 id="acid">3.7 ACID</h3>
+
+<p>
+The ACID feature allows you to attach a callsign label to an aircraft tag.
+This is useful when multiple aircraft are visible in the scope area and you want quick visual identification without referencing EuroScope.
+</p>
+
+<img src="./resources/acid-tag.png" alt="ACID tag">
+
+<p>
+To apply an ACID label, click <strong>ACID</strong>, type the callsign, and click the aircraft symbol you want to label.
+To clear the label, repeat the same process but leave the text blank before selecting the target.
+</p>
+
+<img src="./resources/acid.png" alt="ACID entry">
+
+<h3 id="other-settings">3.8 Other Settings</h3>
+
+<p>
+In the top right corner of the radar are two tools.
+One toggle enables a fullscreen radar view.
+The <strong>HDG</strong> button opens a small draggable heading tool window that stays on top of the radar.
+</p>
+
+<p>
+The heading tool is a manual aid that lets you track assigned headings using +1 and -1 buttons.
+Holding the buttons increases the rate of change.
+This tool does not read from EuroScope and is not synchronized to aircraft data.
+It exists purely to help the controller remember the assigned heading.
+</p>
+
+<img src="./resources/heading-tool.png" alt="Heading tool">
+
+<h2 id="simulator">4. Simulator</h2>
+
+<h3 id="sim-setup">4.1 Setup</h3>
+
+<p>
+Simulator mode allows standalone PAR practice without live traffic.
+This is useful for learning the GlideScope interface, practicing correction timing,
+or running training scenarios with a friend acting as the controller.
+</p>
+
+<p>
+To set up a simulator exercise, open the menu and select <strong>Simulator</strong>.
+In the simulator window, select the desired approach and press <strong>Start Simulator</strong>.
+This opens the Simulator Pilot window and a radar display configured for the selected approach.
+</p>
+
+<img src="./resources/simulator.png" alt="Simulator window">
+
+<p>
+When the simulator is running, the radar display is outlined in yellow to clearly indicate that it is not live traffic.
+Simulated aircraft automatically delete after passing the touchdown point to keep the scope uncluttered.
+</p>
+
+<img src="./resources/simulator-radar.png" alt="Simulator radar">
+<img src="./resources/simulator-pilot.png" alt="Simulator pilot window">
+
+<p>
+The Simulator Pilot window is used to configure wind, create aircraft, and monitor all active simulated traffic.
+Each aircraft has its own control panel used to issue heading, altitude, and speed commands.
+</p>
+
+<h4 id="sim-wind">4.1.1 Wind</h4>
+
+<p>
+Wind plays a major role in PAR approaches because it drives drift and affects how stable an aircraft appears on final.
+The simulator allows you to apply wind by entering a wind heading and speed.
+</p>
+
+<p>
+Once applied, wind causes the aircraft target to drift in the appropriate direction.
+This allows you to practice both recognizing drift trends (using trail dots) and issuing timely corrections.
+Using stronger winds is an effective way to stress-test correction discipline and avoid overcontrolling.
+</p>
+
+<h4 id="sim-add-aircraft">4.1.2 Add Aircraft</h4>
+
+<p>
+To add an aircraft, enter a callsign and select a type from the drop-down list.
+Aircraft type affects speed behavior through different phases of flight.
+This lets the simulator produce more realistic closure rates and timing compared to a fixed-speed target.
+</p>
+
+<p>
+Select a spawn side (Right Base, Left Base, or Straight-In) to control the starting geometry.
+Set the starting distance (4-20 NM) and altitude (500-8000 ft).
+These limits exist to keep aircraft spawning in a realistic and usable envelope for PAR monitoring and intercept practice.
+</p>
+
+<p>
+When complete, select <strong>Add Aircraft</strong>.
+The aircraft will spawn and a control panel will open automatically.
+You can create multiple aircraft to practice sequencing, distraction management, and consistent correction timing.
+</p>
+
+<h4 id="sim-active-aircraft">4.1.3 Active Aircraft</h4>
+
+<p>
+The Active Aircraft list shows every aircraft currently under simulator control.
+This list is your “traffic strip” inside the simulator and is the quickest way to confirm what aircraft exist and which are active.
+</p>
+
+<p>
+If you close a control panel, the aircraft remains active.
+Double-click the aircraft in the list to open a new control panel.
+This is useful when managing multiple aircraft and you want to temporarily declutter your workspace.
+</p>
+
+<h3 id="sim-control">4.2 Controlling the Aircraft</h3>
+
+<p>
+When you add an aircraft, its control panel opens automatically.
+The control panel is divided into sections that mirror basic ATC instructions: heading, altitude, and speed.
+</p>
+
+<p>
+All simulator commands are subject to a brief but variable processing delay.
+This is intentional and represents the difference between issuing an instruction and seeing a real pilot comply.
+If you issue rapid sequences of corrections, you may “fight the delay” and create oscillations.
+For training realism, issue corrections with enough time for the aircraft to respond before issuing another.
+</p>
+
+<img src="./resources/aircraft.png" alt="Aircraft control panel">
+
+<h4 id="sim-info">4.2.1 Information</h4>
+
+<p>
+The information panel shows the aircraft’s current altitude, ground speed, heading, and track.
+</p>
+
+<p>
+Track is especially useful when the simulator operator is acting as a pseudo-pilot for an aircraft on final.
+It provides a precise alignment reference and can be used to “cheat” into the runway heading for setup,
+allowing the operator to set and forget while the controller practices correction technique.
+</p>
+
+<h4 id="sim-heading">4.2.2 Heading</h4>
+
+<p>
+This panel controls heading either through incremental buttons or direct entry.
+Incremental buttons are useful for fine control near final, while direct entry is faster for larger vectors.
+</p>
+
+<p>
+Simulated aircraft turn using standard-rate behavior for larger turns.
+However, 1-2 degree adjustments occur more slowly to mimic the real-world feel of fine corrections on final.
+This prevents unrealistic snapping and makes the simulator behave more like a real aircraft that “settles” onto a heading.
+</p>
+
+<h4 id="sim-altitude">4.2.3 Altitude</h4>
+
+<p>
+The altitude panel controls climb and descent behavior.
+Entering a cleared altitude commands the aircraft to climb or descend at a standard rate until reaching that value,
+then level off automatically.
+</p>
+
+<p>
+The <strong>Level</strong> button accounts for current vertical trend and commands the aircraft to level appropriately.
+This button is locked unless the aircraft is currently climbing or descending.
+</p>
+
+<p>
+The <strong>Begin Descent</strong> button is unlocked when the aircraft is level.
+It sets an initial descent rate and clears the aircraft to 0 feet for a continuous descent profile.
+Once descent is established, <strong>Pitch Up</strong> and <strong>Pitch Down</strong> modify the vertical rate to simulate fine glidepath control.
+</p>
+
+<h4 id="sim-speed">4.2.4 Speed</h4>
+
+<p>
+The speed panel adjusts aircraft speed using presets or manual entry.
+By default, simulated aircraft begin at circuit speed, slow to approach speed upon intercepting the final approach course,
+and slow further to final speed at approximately 3 miles.
+</p>
+
+<p>
+Entering a speed manually overrides the automatic slowdown logic.
+This is useful for custom training scenarios, but it also means the aircraft will no longer follow the standard speed profile.
+To re-enable the automatic profile, select any preset speed again.
+</p>
+
+<h4 id="sim-misc">4.2.5 Misc Settings</h4>
+
+<p>
+The Misc section provides additional aircraft controls:
+</p>
+
+<ul>
+    <li><strong>Pause:</strong> freezes the aircraft in place. If paused for roughly 6-8 seconds, the aircraft will disappear from the radar.</li>
+    <li><strong>Go Around:</strong> sets the aircraft’s cleared altitude to 3000 feet and increases speed to circuit.</li>
+    <li><strong>Kill:</strong> deletes the aircraft (subject to the same 6-8 second removal behavior), closes the window, and removes it from the active list.</li>
+</ul>
+
+<p>
+Variability adds realism by reducing how precisely the aircraft follows commands.
+There are three settings: none, low, and high.
+At none, the aircraft tracks instructions exactly.
+At low and high, the aircraft will show increasing deviation in heading hold, speed stability, and vertical rate,
+creating a more realistic “imperfect pilot/aircraft” training environment.
+</p>
+
+<h2 id="support">5. Support</h2>
+
+<p>
+For any support requests, please email Dylan Oakes at
+<a href="mailto:d.oakes@vatcan.ca">d.oakes@vatcan.ca</a>
+or contact on Discord at <strong>dylanoakes</strong>.
+</p>
+
+</body>
+</html>

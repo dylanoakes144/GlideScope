@@ -3,8 +3,6 @@
 
 GlideScope is a standalone Precision Approach Radar (PAR) display designed for VATSIM Canada. It provides a realistic azimuth and elevation radar for guiding aircraft on final approach using voice instructions.
 
-GlideScope is a standalone Precision Approach Radar (PAR) display designed for VATSIM Canada. It provides a realistic azimuth and elevation radar for guiding aircraft on final approach using voice instructions.
-
 Using EuroScope’s built-in FSD server, GlideScope connects locally and leverages VATSIM’s Velocity update system, which provides higher-frequency packets than legacy radar updates. This allows GlideScope to achieve a refresh rate of approximately one update per second, which is necessary for issuing precise and continuous guidance during a PAR approach.
 
 GlideScope supports both live network traffic and a built-in simulator for training, practice, and demonstrations. Approaches are fully configurable, including runway latitude/longitude, glidepath angle, decision altitude, and touchdown point. The radar display consists of separate azimuth and elevation scopes, adjustable range scaling, adjustable aircraft trails, and controller transmission timing cues.

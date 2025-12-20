@@ -1,5 +1,5 @@
 # Welcome!
-![GlideScope banner](https://github.com/dylanoakes144/GlideScope/blob/main/Config/Documentation/resources/Readme%20Banner.png)
+![GlideScope banner](https://github.com/dylanoakes144/GlideScope/blob/main/Documentation/resources/Readme%20Banner.png)
 
 GlideScope is a standalone Precision Approach Radar (PAR) display designed for VATSIM Canada. It provides a realistic azimuth and elevation radar for guiding aircraft on final approach using voice instructions.
 
@@ -19,4 +19,4 @@ This repository does not include the source code. At this stage, it contains onl
 
 GlideScope is for flight simulation only, with no affiliation to real-world ATC or the Royal Canadian Air Force.
 
-![Screenshot of GlideScope radar](https://github.com/dylanoakes144/GlideScope/blob/main/Config/Documentation/resources/radar-screen.png)
+![Screenshot of GlideScope radar](https://github.com/dylanoakes144/GlideScope/blob/main/Documentation/resources/radar-screen.png)

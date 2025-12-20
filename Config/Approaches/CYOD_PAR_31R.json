@@ -1,0 +1,14 @@
+{
+  "ICAO": "CYOD",
+  "ApproachId": "PAR",
+  "RunwayIdentifier": "31R",
+  "RunwayHeadingMagnetic": 311,
+  "MagneticVariation": 13,
+  "ParAlignmentHeadingDegrees": 324,
+  "ThresholdLatitude": 54.391406211184396,
+  "ThresholdLongitude": -110.26980984708248,
+  "ThresholdElevationFeet": 1775,
+  "DecisionAltitudeFeet": 1975,
+  "GlidepathAngleDegrees": 3,
+  "GroundPointIntercept": 850
+}

@@ -1,0 +1,13 @@
+{
+  "ICAO": "CYWG",
+  "ApproachId": "ILS",
+  "RunwayIdentifier": "36",
+  "RunwayHeadingMagnetic": 5,
+  "MagneticVariation": 4,
+  "ThresholdLatitude": 49.89516556056405,
+  "ThresholdLongitude": -97.24190318383623,
+  "ThresholdElevationFeet": 778,
+  "DecisionAltitudeFeet": 978,
+  "GlidepathAngleDegrees": 3,
+  "GroundPointIntercept": 1000
+}

@@ -1,0 +1,13 @@
+{
+  "ICAO": "CYYZ",
+  "ApproachId": "ILS",
+  "RunwayIdentifier": "23",
+  "RunwayHeadingMagnetic": 237,
+  "MagneticVariation": -10,
+  "ThresholdLatitude": 43.69381809666534,
+  "ThresholdLongitude": -79.63552419613805,
+  "ThresholdElevationFeet": 558,
+  "DecisionAltitudeFeet": 808,
+  "GlidepathAngleDegrees": 3,
+  "GroundPointIntercept": 1000
+}

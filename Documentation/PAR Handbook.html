@@ -1,0 +1,329 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<link rel="stylesheet" href="./resources/style.css">
+		<title>PAR Controller Handbook</title>
+	</head>
+	<body>
+		<h1 id="page_title">PAR Handbook</h1>
+
+		<details id="section">
+			<summary id="sec_head">1. Introduction</summary>
+			
+			<div class="content">
+				<p>This handbook prepares VATCAN controllers to conduct Precision Approach Radar (PAR) approaches. Although PAR approaches are typically associated with military operations, they may be provided to any aircraft upon request, subject to controller workload. This document consolidates general procedures, policies, and standard phraseology.</p>
+				
+				<p>For information regarding operation of GlideScope software, refer to the User Guide.
+			</div>
+
+			<h3 id="sub_sec_head">1.1 What is a PAR?</h3>
+
+			<div class="content">
+				<p>A PAR is a high-resolution radar system used to monitor an aircraft’s position relative to the runway threshold. It provides both lateral (azimuth) and vertical (glidepath) guidance, allowing controllers to issue precise heading and vertical speed corrections to maintain a stabilized final approach.</p>
+				
+				<p>Compared to standard radar, a PAR operates with a narrow beam and limited sweep area, resulting in higher positional accuracy and a faster refresh rate. During a PAR approach, the controller guides the aircraft to minimums using radio instructions only. Aside from tuning the correct frequency, pilots do not configure onboard equipment or reference approach charts.</p>
+
+				<img src="./resources/radar-screen.png" alt="PAR radar scope">
+			</div>
+
+			<h3 id="sub_sec_head">1.2 Who Can Request a PAR?</h3>
+
+			<div class="content">
+				<p>In Canada, PAR approaches are normally offered at military aerodromes and flown by military pilots. On VATSIM, however, any pilot may request a PAR approach.</p>
+
+				<p>Because PAR approaches require continuous pilot input, many VATSIM pilots may have limited experience. Controllers should expect occasional hesitation, delayed responses, or difficulty maintaining precise headings and pitch. When appropriate, controllers may ask whether the pilot has reviewed an event brief or previously flown a PAR approach.</p>
+			</div>
+
+			<h3 id="sub_sec_head">1.3 Who Can Control a PAR?</h3>
+
+			<div class="content">
+				<p>Because a PAR approach is radar-based, controllers are expected to hold a Student 3 (S3) rating or higher. While a Student 2 (S2) controller may technically provide a PAR at an aerodrome where they hold a solo endorsement, this is strongly discouraged due to the workload and precision required.</p>
+
+				<p>PAR approaches leave little margin for error. Controllers are encouraged to consult their FIR staff if unsure and to practice using GlideScope’s built-in simulator before conducting live PAR operations.</p>
+			</div>
+
+			<h3 id="sub_sec_head">1.4 Additional Reference Material</h3>
+
+			<div class="content">
+				<p>The following video provides a real-world example of a PAR approach being conducted at CFB Greenwood.</p>
+
+				<p>
+				  <a href="https://www.youtube.com/watch?v=7OPmiw5WAQY" target="_blank" rel="noopener">
+					Precision Approach Radar (PAR) Approach into CFB Greenwood
+				  </a>
+				</p>
+			</div>
+		</details>
+		
+		<details id="section">
+			<summary id="sec_head">2. Common Problems</summary>
+
+			<div class="content">
+				<p>Due to simulator differences, desynchronized weather, and pilot skill variation, conducting PAR approaches online can be challenging. The following limitations should be considered:</p>
+
+				<ul id="common_problems">
+				  <li><strong>Desynchronized weather:</strong> Simulators interpret METAR data differently, resulting in varying winds and inconsistent heading corrections.</li>
+				  <li><strong>Heading precision:</strong> Many pilot setups make small (1-2 degree) heading adjustments difficult to execute or maintain.</li>
+				  <li><strong>Following another approach:</strong> Some pilots may unintentionally follow an ILS or RNAV profile during a PAR approach. Controllers may remind pilots to follow radar guidance if this occurs.</li>
+				  <li><strong>Pilot skill:</strong> Limited PAR experience may result in delayed responses, overcorrections, or unstable pitch and altitude control.</li>
+				</ul>
+			</div>
+		</details>
+
+		<details id="section">
+			<summary id="sec_head">3. Policies &amp; Procedures</summary>
+
+			<h3 id="sub_sec_head">3.1 Terminal Controller Responsibilities</h3>
+
+			<div class="content">
+				<p>The terminal or overlying controller is responsible for initiating and supporting PAR operations. The terminal controller shall:</p>
+
+				<ul>
+				  <li>Establish initial contact, confirm intentions, and identify the aircraft.</li>
+				  <li>Coordinate the availability of the PAR controller and retain control if PAR is unavailable.</li>
+				  <li>Ensure only one aircraft is on the PAR frequency at any given time.</li>
+				  <li>Transfer identification and sequencing information during a PAR handoff.</li>
+				</ul>
+
+				<p>A PAR handoff shall include the following information:</p>
+				<ul id="ho_list">
+				  <li>Callsign</li>
+				  <li>Distance and direction from the aerodrome</li>
+				  <li>Heading</li>
+				  <li>Altitude</li>
+				  <li>Sequence</li>
+				</ul>
+
+				<div class="example">
+					<strong>PAR:</strong> Terminal, PAR, CFC3104 has landed, ready for next traffic.<br>
+					<strong>Terminal:</strong> Next traffic is BDIT21, 15 miles south, heading 360, 5000, number two following CFC1131.<br>
+					<strong>PAR:</strong> BDIT21 identified, number two, my control.<br>
+					<strong>Terminal:</strong> BDIT21, contact Moose Jaw radar on 134.1.<br>
+				</div>
+
+				<p>It is considered good practice for the terminal controller to obtain the pilot’s first approach request on the ground prior to departure for local IFR traffic. This is typically accomplished when the aircraft contacts clearance delivery.</p>
+
+				<div class="example">
+					<strong>APLO11:</strong> Clearance Delivery, APLO11, request local IFR.<br>
+					<strong>Clearance Delivery:</strong> APLO11, Clearance Delivery, say first approach request.<br>
+					<strong>APLO11:</strong> APLO11, requesting vectors for the ILS followed by a low approach.<br>
+					<strong>Clearance Delivery:</strong> APLO11, roger, cleared to Moose Jaw via the MACAULEY1 departure, runway 11L, squawk 5071.<br>
+				</div>
+
+				<p>The controller providing clearance delivery services shall pass the first approach request to the terminal controller, as applicable.</p>
+
+				<p>An aircraft may be transferred to the PAR controller prior to departure provided the controller is aware that the flight will require PAR services and there is a reasonable expectation that no other aircraft will require the PAR controller ahead of it in the sequence.</p>
+
+				<div class="example">
+					<strong>Terminal:</strong> PAR, terminal, BDIT21 on the ground, vectored ILS followed by a low approach, number 1, yours when airborne.<br>
+					<strong>PAR:</strong> Terminal, PAR, BDIT21 number 1, mine when airborne.<br>
+				</div>
+
+				<p>When coordinating a ground handoff to the PAR controller, the terminal controller shall coordinate with the controller providing tower services to ensure the aircraft is handed off to PAR upon departure.</p>
+
+				<p>Aircraft may also be handed off to the PAR controller while established on final approach. In these cases, the terminal controller may coordinate a delayed transfer of control to occur in the overshoot.</p>
+
+				<div class="example">
+					<strong>PAR:</strong> PAR, terminal, next traffic is BDIT21, 3 miles final, number 2 following APLO11, yours in the overshoot.<br>
+					<strong>PAR:</strong> Terminal, PAR, BDIT21 number 2 following APLO11, mine in the overshoot.<br>
+				</div>
+
+				<p>Final approach handoffs shall be coordinated with the controller providing tower services to ensure the aircraft is transferred to the PAR controller during the overshoot.</p>
+
+				<div class="note">
+				  <p><strong>Reminder: PAR controllers may be assigned any type of approach and are not limited to conducting PAR approaches.</strong></p>
+				</div>
+			</div>
+
+			<h3 id="sub_sec_head">3.2 PAR Controller Responsibilities</h3>
+
+			<div class="content">
+				<p>Once the PAR handoff is complete and the aircraft checks in on the PAR frequency, the PAR controller assumes responsibility for the approach and sequencing.</p>
+			</div>
+
+			<h4 id="sub_sub_sec_head">3.2.1 Initial Contact</h4>
+
+			<div class="content">
+				<p>Upon initial contact, the PAR controller shall:</p>
+
+				<ul id="init_cntct_list">
+				  <li>Ensure the aircraft is identified, particularly when accepting the aircraft upon departure.</li>
+				  <li>Identify as the radar controller.</li>
+				  <li>Request intentions following the approach.</li>
+				  <li>Issue overshoot instructions as required.</li>
+				</ul>
+
+				<p>The following sections primarily focus on PAR approaches. For non-PAR approaches, see section 3.2.6.</p>
+			</div>
+
+			<h4 id="sub_sub_sec_head">3.2.2 Vectoring and Approach Clearance</h4>
+
+			<div class="content">
+				<p>The PAR controller shall:</p>
+
+				<ul id="vector_list">
+				  <li>Vector the aircraft to a standard 30-degree intercept.</li>
+				  <li>Issue the PAR approach clearance including the decision altitude.</li>
+				  <li>Establish the aircraft on the holding heading.</li>
+				</ul>
+			</div>
+
+			<h4 id="sub_sub_sec_head">3.2.3 Continuous Communications Requirements</h4>
+
+			<div class="content">
+				<p>The PAR controller shall regularly:</p>
+
+				<ul id="regularly_list">
+				  <li>Advise the pilot when the aircraft is on glidepath and on course.</li>
+				  <li>Provide distance-to-touchdown information at least every mile.</li>
+				  <li>Maintain continuous communication during final approach.</li>
+				</ul>
+
+				<p>During a PAR approach, the controller shall make a transmission approximately every 5 seconds while the aircraft is on final approach. Prolonged silence constitutes lost communications, and the pilot is expected to commence an overshoot.</p>
+			</div>
+
+			<h4 id="sub_sub_sec_head">3.2.4 Glidepath Intercept and Monitoring</h4>
+
+			<div class="content">
+				<p>The PAR controller shall:</p>
+
+				<ul>
+				  <li>Advise when approaching the descent point.</li>
+				  <li>Issue small heading corrections to maintain centreline.</li>
+				  <li>Provide relative vertical guidance only.</li>
+				  <li>Issue distance-to-touchdown updates at 1-mile intervals.</li>
+				  <li>Maintain continuous communication every 5-10 seconds.</li>
+				</ul>
+			</div>
+
+			<h4 id="sub_sub_sec_head">3.2.5 Landing or Overshoot</h4>
+
+			<div class="content">
+				<p>The PAR controller shall:</p>
+
+				<ul id="lnd/os_instructions">
+				  <li>Relay or issue landing clearance as appropriate.</li>
+				  <li>Advise the pilot when they are approaching the decision altitude and when they have passed the decision altitude.</li>
+				  <li>Continue monitoring until the aircraft is observed on the ground or in the overshoot.</li>
+				  <li>Advise the terminal or overlying controller of aircraft status.</li>
+				  <li>Provide the aircraft with the next frequency, as applicable.</li>
+				</ul>
+			</div>
+
+			<h4 id="sub_sub_sec_head">3.2.6 Non-PAR Approaches</h4>
+
+			<div class="content">
+				<p>PAR controllers may support non-PAR approaches such as ILS or RNAV but do not provide continuous glidepath or centreline guidance.</p>
+
+				<p>In this case, the PAR controller shall:</p>
+
+				<ul>
+				  <li>Issue advisories for significant deviations.</li>
+				  <li>Coordinate landing clearance and transfer of control.</li>
+				</ul>
+			</div>
+		</details>
+
+		<details id="section">
+			<summary id="sec_head">4. Phraseology</summary>
+
+			<div class="content">
+				<p>This section provides recommended phraseology for PAR operations. Examples are representative and may be adapted to the situation.</p>
+			</div>
+
+			<h3 id="sub_sec_head">4.1 Introduction &amp; Pre-Approach</h3>
+
+			<div class="content">
+				<ul>
+				  <li>&lt;callsign&gt;, &lt;aerodrome&gt; radar. Altimeter &lt;altimeter&gt;. State intentions following &lt;approach&gt;.</li>
+				  <li>&lt;callsign&gt;, in the overshoot &lt;instruction&gt; to &lt;altitude&gt;.</li>
+				</ul>
+
+				<div class="example">
+					<strong>PAR:</strong> BDIT22, Moose Jaw radar. Altimeter 29.92. State intentions following the PAR.<br>
+					<strong>BDIT22:</strong> BDIT22, request low approach followed by vectors for the ILS.<br>
+					<strong>PAR:</strong> Roger, in the overshoot fly runway heading to 5000.<br>
+				</div>
+			</div>
+
+			<h3 id="sub_sec_head">4.2 Approach Clearance</h3>
+
+			<div class="content">
+				<ul>
+				  <li>&lt;callsign&gt;, &lt;distance&gt; from &lt;aerodrome&gt;, cleared for the PAR runway &lt;runway&gt;, decision altitude &lt;decision altitude&gt;.</li>
+				  <li>&lt;callsign&gt;, turn &lt;left/right&gt; heading &lt;heading&gt;.</li>
+				  <li>You are now on final approach. Do not acknowledge transmissions unless requested.</li>
+				</ul>
+
+
+				<div class="example">
+					<strong>PAR:</strong> BDIT22, 15 miles from Moose Jaw, cleared for the PAR runway 11L, decision altitude 2082 feet.<br>
+					<strong>BDIT22:</strong> Cleared for the PAR runway 11L, BDIT22<br>
+					<strong>PAR:</strong> Turn right heading 110 for final approach.<br>
+					<strong>BDIT22:</strong> turning right heading 110.<br>
+					<strong>PAR:</strong> You are now on final approach. Do not acknowledge transmissions unless requested.<br>
+				</div>
+
+				<div class="note">
+				  <p>Once the aircraft has been instructed to not acknowledge transmissions, you may omit their callsign for the remainder of the approach with the exception of the landing clearance.</p>
+				</div>
+			</div>
+
+			<h3>4.3 Glidepath Intercept</h3>
+
+			<div class="content">
+				<ul>
+				  <li>Approaching descent point, standby for descent.</li>
+				  <li>Begin descent now for a &lt;glidepath angle&gt;-degree glidepath.</li>
+				</ul>
+
+				<div class="example">
+					<strong>PAR:</strong> Approaching descent point, standby for descent.<br>
+					<strong>PAR:</strong> Begin descent now for a 3-degree glidepath.<br>
+				</div>
+			</div>
+
+			<h3 id="sub_sec_head">4.4 Course &amp; Glidepath Corrections</h3>
+
+			<div class="content">
+				<ul>
+				  <li>&lt;slightly/well&gt; &lt;left/right&gt; of course, correcting &lt;nicely/slowly&gt;.</li>
+				  <li>&lt;slightly/well&gt; &lt;above/below&gt; glidepath, correcting &lt;nicely/slowly&gt;.</li>
+				  <li>&lt;slightly/well&gt; &lt;above/below&gt; glidepath, adjust rate of descent.</li>
+				  <li>Turn &lt;left/right&gt; heading &lt;heading&gt;.</li>
+				</ul>
+
+				<div class="example">
+					<strong>PAR:</strong> Slightly right of course, correcting slowly.<br>
+					<strong>PAR:</strong> Turn left heading 108.<br>
+					<strong>PAR:</strong> Slightly above glidepath, adjust rate of descent.<br>
+					<strong>PAR:</strong> Well below glidepath, correcting nicely.<br>
+				</div>
+			</div>
+
+			<h3 id="sub_sec_head">4.5 Landing or Overshoot</h3>
+
+			<div class="content">
+				<ul>
+				  <li>&lt;callsign&gt;, cleared to land runway &lt;runway&gt;, wind &lt;wind&gt;, check gear down.</li>
+				  <li>Approaching decision altitude.</li>
+				  <li>Passing decision altitude.</li>
+				  <li>Radar observes you on the ground. Contact &lt;controller&gt; on &lt;frequency&gt;.</li>
+				  <li>Radar observes you in the overshoot. Contact &lt;controller&gt; on &lt;frequency&gt;.</li>
+				</ul>
+
+				<div class="example">
+					<strong>PAR:</strong> BDIT21, cleared to land runway 29R, wind 280 at 10, check gear down.<br>
+					<strong>PAR:</strong> Approaching decision altitude.<br>
+					<strong>PAR:</strong> Passing decision altitude.<br>
+					<strong>PAR:</strong> Radar observes you on the ground. Contact tower on 126.2.<br>
+					<strong>PAR:</strong> Radar observes you in the overshoot. Contact terminal 119.0.<br>
+				</div>
+			</div>
+		</details>
+	</body>
+
+</html>
+

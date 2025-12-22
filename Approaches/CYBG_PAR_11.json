@@ -1,0 +1,13 @@
+{
+  "ICAO": "CYBG",
+  "ApproachId": "PAR",
+  "RunwayIdentifier": "11",
+  "RunwayHeadingMagnetic": 109,
+  "MagneticVariation": -15,
+  "ThresholdLatitude": 48.33226160206689,
+  "ThresholdLongitude": -71.01661575621661,
+  "ThresholdElevationFeet": 519,
+  "DecisionAltitudeFeet": 719,
+  "GlidepathAngleDegrees": 3,
+  "GroundPointIntercept": 1000
+}

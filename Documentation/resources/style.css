@@ -1,0 +1,144 @@
+body {
+	font-family: Arial, Helvetica, sans-serif;
+	line-height: 1.5;
+	color: #000;
+
+	max-width: 1600px;
+	margin-left: auto;
+	margin-right: auto;
+
+	padding-left: 32px;
+	padding-right: 32px;
+}
+
+#page_title {
+	font-size: 2.2em;
+    margin-bottom: 0.6em;	
+}
+
+#section {
+	border: 1px solid #aaaaaa;
+	border-radius: 4px;
+	padding: 0.5em 0.5em 0;
+	margin: 15px;
+	margin-left: 0px;
+}
+
+#sec_head {
+    font-size: 1.8em;
+	font-weight: bold;
+}
+
+#section:[open] {
+	padding: 0.5em;
+}
+
+#section[open] #section_head {
+	border-bottom: 1px solid #aaaaaa;
+	margin-bottom: 0.5em;
+}
+
+#sub_sec {
+	border: 1px solid #aaaaaa;
+	border-radius: 4px;
+	padding: 0.5em 0.5em 0;
+	margin: 8px;
+}
+
+#sub_sec_head {
+    font-size: 1.25em;
+	font-weight: bold;
+}
+
+#sub_sec:[open] {
+	padding: 0.5em;
+}
+
+#sub_sec[open] #sub_sec_head {
+	border-bottom: 1px solid #aaaaaa;
+	margin-bottom: 0.5em;
+}
+
+#sub_sub_sec_head {
+	margin-top: 1.2em;
+    font-size: 1.05em;
+    font-weight: bold;
+}
+
+p {
+    margin: 0.6em 0 0.9em 0;
+}
+
+ul {
+    margin: 0.4em 0 1em 1.2em;
+}
+
+ul ul {
+    margin-top: 0.4em;
+}
+
+li {
+    margin-bottom: 0.4em;
+}
+
+.example-title {
+    margin-top: 0.9em;
+    font-size: 0.85em;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    color: #444;
+}
+
+.example {
+	background: #f7f7f7;
+    border-left: 4px solid #666;
+    padding: 10px 14px;
+    margin: 8px 0 20px 0;
+    font-family: Consolas, monospace;
+    font-size: 0.95em;	
+}
+
+/*pre {
+    background: #f7f7f7;
+    border-left: 4px solid #666;
+    padding: 10px 14px;
+    margin: 8px 0 20px 0;
+    font-family: Consolas, monospace;
+    font-size: 0.95em;
+    white-space: pre-wrap;
+}*/
+
+img {
+    max-width: 100%;
+    margin: 16px 0;
+}
+
+.caution {
+    border-left: 4px solid #900;
+    background: #fff4f4;
+    padding: 10px 14px;
+    margin: 20px 0;
+}
+
+.note {
+	border-left: 4px solid #444;
+	padding-left: 12px;
+	margin: 12px 0;
+}
+
+.grid-cntnt {
+    display: grid;
+    grid-template-columns: auto 1fr;
+    column-gap: 32px;
+    align-items: start;
+}
+
+.grid-cntnt img {
+    justify-self: end;
+}
+
+.grid-cntnt img {
+    max-width: 320px;
+}
+

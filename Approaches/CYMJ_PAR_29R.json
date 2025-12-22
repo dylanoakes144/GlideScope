@@ -1,0 +1,13 @@
+{
+  "ICAO": "CYMJ",
+  "ApproachId": "PAR",
+  "RunwayIdentifier": "29R",
+  "RunwayHeadingMagnetic": 289,
+  "MagneticVariation": 9,
+  "ThresholdLatitude": 50.32703578281517,
+  "ThresholdLongitude": -105.5435942513579,
+  "ThresholdElevationFeet": 1881,
+  "DecisionAltitudeFeet": 2081,
+  "GlidepathAngleDegrees": 3,
+  "GroundPointIntercept": 992
+}

@@ -11,7 +11,7 @@ Use of GlideScope is not limited to PAR approaches. It may also be used to monit
 
 ## Downloading GlideScope
 
-To download the latest version, select the **Releases** tab on GitHub and download the most recent release. The download will be provided as a ZIP file. Extract the contents of the ZIP and run the included .exe file. No installation is required.
+To download the latest version, select the [**Releases**](https://github.com/dylanoakes144/GlideScope/releases) tab on GitHub and download the most recent release. The download will be provided as a ZIP file. Extract the contents of the ZIP and run the included .exe file. No installation is required.
 
 This repository does not include the source code. At this stage, it contains only approach data (JSON files) and documentation. Precompiled application binaries are available exclusively through the Releases tab. If you create JSON approach files for your local airport, feel free to send them to me. I’m happy to review and include them in this repository so others can use them as well.
 
